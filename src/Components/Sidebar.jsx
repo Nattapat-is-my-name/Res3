@@ -3,7 +3,6 @@ import {
   Article,
   Group,
   Home,
-  ModeNight,
   Person,
   Settings,
   Storefront,
@@ -22,7 +21,7 @@ import React from "react";
 const Sidebar = () => {
   return (
     <Box sx={{ display: { xs: "none", md: "block" } }}>
-      <Box position="fixed">
+      <Box>
         <List>
           <ListItem disablePadding>
             <ListItemButton component="a" href="#home">

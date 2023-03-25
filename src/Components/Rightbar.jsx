@@ -10,42 +10,56 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
+import { Grid } from "@mui/material";
 import React from "react";
+
+import { styled } from "@mui/material/styles";
+import Paper from "@mui/material/Paper";
+import { ListItemButton, ListItemIcon } from "@mui/material";
+import { Home } from "@mui/icons-material";
+const itemData = [
+  {
+    img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
+    title: "Breakfast",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
+    title: "Burger",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
+    title: "Camera",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c",
+    title: "Coffee",
+  },
+ 
+  
+];
+
+
 
 const Rightbar = () => {
   return (
-    <Box sx={{ display: { xs: "none", md: "block" } }} > 
-      <Box position="fixed" >
+    <Box sx={{ display: { xs: "none", md: "block" } }}>
+      <Box>
         <Typography variant="h6" fontWeight={100} mt={2} mb={2}>
           Latest Photos
         </Typography>
-        <ImageList cols={2} rowHeight={100} gap={5}>
-          <ImageListItem >
-            <img
-              src="https://source.unsplash.com/random/345x140"
-              alt=""
-              
-            />
-          </ImageListItem>
-          <ImageListItem>
-            <img
-              src="https://source.unsplash.com/random/345x140"
-              alt=""
-            />
-          </ImageListItem>
-          <ImageListItem>
-            <img
-              src="https://source.unsplash.com/random/345x140"
-              alt=""
-            />
-          </ImageListItem>
-          <ImageListItem>
-            <img
-              src="https://source.unsplash.com/random/345x140"
-              alt=""
-            />
-          </ImageListItem>
+        <ImageList sx={{ width: "auto" }} cols={2} >
+          {itemData.map((item) => (
+            <ImageListItem key={item.img}>
+              <img
+                src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+                srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                alt={item.title}
+                loading="lazy"
+              />
+            </ImageListItem>
+          ))}
         </ImageList>
+
         <Typography variant="h6" fontWeight={100} mt={2}>
           Latest Conversations
         </Typography>

@@ -25,7 +25,7 @@ function Nav() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" sx={{ backgroundColor: "#20232a" }}>
+      <AppBar  position="static" sx={{ backgroundColor: "#20232a" }}>
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           <Typography variant="h6" sx={{ color: "#fff" }}>
             My Website

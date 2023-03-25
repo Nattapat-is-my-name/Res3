@@ -8,31 +8,31 @@ import Grid from '@mui/material/Grid';
 import Rightbar from './Components/Rightbar';
 import Content from './Components/Content';
 
-// const theme = useTheme();
-// const matches = useMediaQuery(theme.breakpoints.up('sm'));
+
 
 function App() {
 
   return (
 
-    <Box>
+    <Box component="span">
       <Nav />
-      <Grid container spacing={3} pt={10}>
-        <Grid item md={3} >
-          <Sidebar />
+      <Container >
+        <Grid container spacing={3} p={5}>
+          <Grid item md={3}  >
+            <Sidebar />
+          </Grid>
+          <Grid item xs={12} md={6} >
+            <Content />
+          </Grid>
+          <Grid item md={3}>
+            <Rightbar />
+          </Grid>
         </Grid>
-        <Grid item xs={12} md={6}>
-          <Container sx={{ p: 3 }} >
-            <Content></Content>
-          </Container>
-        </Grid>
-        <Grid item md={3}>
-          <Rightbar></Rightbar>
-        </Grid>
-      </Grid>
+      </Container>
     </Box>
 
   );
 }
 
 export default App;
+
