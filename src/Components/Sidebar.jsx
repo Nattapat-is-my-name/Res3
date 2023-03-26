@@ -14,14 +14,14 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
-
 } from "@mui/material";
 import React from "react";
+
 
 const Sidebar = () => {
   return (
     <Box sx={{ display: { xs: "none", md: "block" } }}>
-      <Box>
+      <Box display={"flex"} justifyContent={'flex-end'} >
         <List>
           <ListItem disablePadding>
             <ListItemButton component="a" href="#home">
@@ -31,6 +31,7 @@ const Sidebar = () => {
               <ListItemText primary="Homepage" />
             </ListItemButton>
           </ListItem>
+
           <ListItem disablePadding>
             <ListItemButton component="a" href="#simple-list">
               <ListItemIcon>
@@ -39,6 +40,7 @@ const Sidebar = () => {
               <ListItemText primary="Pages" />
             </ListItemButton>
           </ListItem>
+
           <ListItem disablePadding>
             <ListItemButton component="a" href="#simple-list">
               <ListItemIcon>
@@ -47,6 +49,7 @@ const Sidebar = () => {
               <ListItemText primary="Groups" />
             </ListItemButton>
           </ListItem>
+
           <ListItem disablePadding>
             <ListItemButton component="a" href="#simple-list">
               <ListItemIcon>
@@ -55,6 +58,7 @@ const Sidebar = () => {
               <ListItemText primary="Marketplace" />
             </ListItemButton>
           </ListItem>
+
           <ListItem disablePadding>
             <ListItemButton component="a" href="#simple-list">
               <ListItemIcon>
@@ -63,6 +67,7 @@ const Sidebar = () => {
               <ListItemText primary="Friends" />
             </ListItemButton>
           </ListItem>
+
           <ListItem disablePadding>
             <ListItemButton component="a" href="#simple-list">
               <ListItemIcon>
@@ -71,6 +76,7 @@ const Sidebar = () => {
               <ListItemText primary="Settings" />
             </ListItemButton>
           </ListItem>
+
           <ListItem disablePadding>
             <ListItemButton component="a" href="#simple-list">
               <ListItemIcon>

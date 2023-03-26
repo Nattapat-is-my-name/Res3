@@ -24,10 +24,10 @@ function Nav() {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box >
       <AppBar  position="static" sx={{ backgroundColor: "#20232a" }}>
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography variant="h6" sx={{ color: "#fff" }}>
+          <Typography variant="h5" sx={{ color: "#fff" }}>
             My Website
           </Typography>
           <IconButton
